@@ -38,10 +38,10 @@ function createPaginationElem(){
     console.log(pagesNum)
     for(let i=0;i<pagesNum;i++){
         let page=document.createElement("span")
-        page.innerText=`${i+1} `
+        page.innerText=` ${i+1} `
         pag.appendChild(page)  
         page.addEventListener('click', function (){
-            goToPage(`${i+1}`)
+            goToPage(` ${i+1} `)
         })
     }
     document.querySelector("#prev-icon").addEventListener('click', function(){

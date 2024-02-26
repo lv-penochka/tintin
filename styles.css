@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+         }
+    body{
+         background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    nav {
+        position: relative;
+        top: 15px;
+        left: 50%;
+        width: 80%;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);border: 1px solid rgba(255, 255, 255, 0.3);
+        transform: translateX(-50%);
+        display: flex;
+        animation: slide-in 1s ease-out;
+      }
+      
+      ul {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        flex: 1 1 auto;
+        margin: 0;
+        padding: 0 30px;
+        list-style-type: none;
+        li:not(:last-child) {
+          margin-right: 40px;
+        }
+        li {
+          border: 2px solid transparent;
+          border-radius: 20px;
+          padding: 10px 35px;
+          transition: background 0.2s;
+          a {
+            color: #2375D8;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 0.2s;
+          }
+          ul {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            display: block;
+            margin: 12px -12px;
+            padding: 0;
+            background: #FFA91B;
+            border: 2px solid #F7C833;
+            border-right: 2px solid #F89329;
+            border-bottom: 2px solid #F89329;
+            border-radius: 5px;
+            transition: opacity 0.2s, visibility 0.2s;
+            li {
+              margin: -2px 0 0 -2px;
+              width: calc(100% - 20px);
+              line-height: 1.7;
+              a {
+                color: #2375D8;
+              }
+            }
+          }
+          &:hover {
+            background: #EC4138;
+            border: 2px solid #F05749;
+            border-right: 2px solid #E02A21;
+            border-bottom: 2px solid #E02A21;
+            a {
+              color: #F9F8FD;
+            }
+            ul {
+              visibility: visible;
+              opacity: 1;
+              box-shadow: 0px 3px 5px 2px #EBECF1;
+              li {
+                a {
+                  color: #F9F8FD;
+                }
+              }
+            }
+          }
+        }
+      } 
+      @keyframes slide-in {
+        0% {
+          top: -50px;
+        }
+        40% {
+          top: 20px;
+        }
+        70% {
+          top: 10px;
+        }
+        100% {
+          top: 15px;
+        }
+      }
+    tbody tr {
+        width: 100%;
+    }
+    #shop-wrapper {
+        margin-top: 20px;
+
+    }
+    select {
+            appearance: none; /* remove default appearance set by the browser */
+            outline: none; /* remove the outline shown on focus */
+            cursor: pointer; /* change the mouse cursor icon */
+    
+            color:#7a7b80;  /* text color */
+            background-color: rgb(252, 247, 242);
+            border: 2px solid #EBECF1;
+    
+            border-radius: 15px;  /* round the border corners */
+            padding: 5px 10px;
+            width: 200px;
+            height: 40px;
+        
+            font-size: 16px;
+            text-align: center;
+          }
+         
+          select:hover{
+            color: #2375D8;
+          }
+          select:focus{
+            background:#F89329;
+            border-color: #F89329;
+            color: #F9F8FD;
+        }
+        input[type="checkbox"] {
+            width: 1rem;
+            height: 1rem;
+            accent-color:#2375D8;
+          }
+        input[type="checkbox"]::before {
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+            transform: scale(0);
+            background-color:#2375D8;
+          }     
+        #select-shop{
+            color:#7a7b80;  /* text color */
+            background-color: rgb(252, 247, 242);
+            border: 2px solid #EBECF1;
+    
+            border-radius: 15px;  /* round the border corners */
+            padding: 5px 10px;
+            width: 200px;
+            height: 40px;
+        
+            font-size: 16px;
+            text-align: center;
+        }     
+    #shop-wrapper tr td#shop-menu {
+        display:flex;
+        
+        justify-content:center;      
+       
+    }
+    #shop-menu{
+        font-size: larger;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+        margin:30px;
+        height: 300px;
+    }
+    #shop-menu-content{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+        height: 100%;      
+    }
+  
+   
+    #cover{
+        margin:30px;
+        border-radius:20px ;
+        background-image: url("https://cdn001.tintin.com/public/tintin/img/static/herge/totor.jpg" );
+        height:300px;
+        border:1px solid #dddfe6;
+        background-size: cover;
+        background-position: center;
+
+    }
+    #shop-wrapper tr td#shop-content {
+        width: 67%;
+    }
+    #items-layout td{
+        width: 33.3%;
+
+    }
+    #items-layout img{
+        width: 70%;
+        border-radius: 5px;
+        margin: 30px 10% 10px 10%;
+        box-shadow:  10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+    }
+    #items-layout p{
+        text-align: center;  
+        overflow:hidden; 
+        margin-bottom: 10px; 
+        cursor: pointer;        
+    }
+    #items-layout p:hover{
+        color: #2375D8;
+    }
+    #items-layout tr td:hover{
+         transform: scale(105%);
+    }
+    #items-pagination{
+        text-align: center;
+    
+    }
+    #items-pagination span{
+        padding: 2px;
+        margin: 10px;
+        border-radius: 5px;
+            cursor: pointer; 
+    }
+    #items-pagination td{
+       height: 60px;
+    }
+    #middle-section{
+        display: inline;
+        margin: 10% 0;
+    }
+    #items-pagination span:hover{
+         
+         background-color: lightgray;
+         transform: scale(110%);
+    }
+    .current-page-button{
+        background-color: #EC4138;
+        color: #F9F8FD;      
+    }

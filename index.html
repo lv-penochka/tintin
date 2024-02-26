@@ -5,177 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Нам нравится учиться</title>
+    <link rel='stylesheet' href='styles.css'/>
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Inconsolata">
-    <style type="text/css">
-        * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Comfortaa', sans-serif;
-             }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        table#head-menu {
-            background-color: lightsalmon;
-            border: 1px solid salmon;
-        }
-
-        table#head-menu thead tr {
-            border-bottom: 1px solid lightgray;
-           
-        }
-
-        tbody tr {
-            width: 100%;
-        }
-        #shop-wrapper {
-            margin-top: 20px;
-            
-        }
-
-        #shop-wrapper tr td#shop-menu {
-            display:flex;
-            align-items: start;
-            justify-content:center;
-           
-        }
-        #shop-menu{
-        
-           
-        }
-        #shop-menu-content{
-            padding: 30px;
-            font-size: larger;
-            background-color: bisque;
-            border-radius: 10px;
-            margin: 5%; 
-        }
-      
-        #shop-menu-content div{
-            margin-top: 10px; 
-        }
-        #shop-wrapper tr td#shop-content {
-            width: 67%;
-        }
-
-        .slider-container {
-  position: relative;
-  border-radius: 10px;
-  height: 300px;
-
-  border: 1px solid lightgray;
-  overflow: hidden;
-}
-
-.slider {
-  transition: transform 0.5s ease-in-out;
-}
-
-.slider img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.prev-button,
-.next-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
-  color: red;
-}
-
-.prev-button {
-  left: 10px;
-}
-
-.next-button {
-  right: 10px;
-}
-        #items-layout td{
-            width: 33.3%;
-
-        }
-        #items-layout img{
-            width: 70%;
-            border-radius: 5px;
-            margin: 30px 10% 10px 10%;
-            box-shadow:  10px 10px 15px 0px rgba(0, 0, 0, 0.25);
-        }
-        #items-layout p{
-            text-align: center;  
-            overflow:hidden; 
-            margin-bottom: 10px; 
-            cursor: pointer;        
-        }
-        #items-layout p:hover{
-            color: rgb(109, 152, 168) ;
-        }
-        #items-layout tr td:hover{
-             transform: scale(105%);
-        }
-        #items-pagination{
-            text-align: center;
-        
-        }
-        #items-pagination span{
-            padding: 2px;
-            margin: 10px;
-            border-radius: 5px;
-                cursor: pointer; 
-        }
-        #items-pagination td{
-           height: 60px;
-        }
-        #middle-section{
-            display: inline;
-            margin: 10% 0;
-        }
-        #items-pagination span:hover{
-             
-             background-color: lightgray;
-             transform: scale(110%);
-        }
-        .current-page-button{
-            background-color: rgb(170, 221, 241);
-          
-        }
-    </style>
 </head>
-
 <body>
-    <table id="head-menu">
-        <thead>
-            <tr>
-                <th>
-                    Menu
-                </th>
-                <th>
-                    TinTin comics shop
-                </th>
-                <th>
-                    Cart
-                </th>
-            </tr>
-        </thead>
-    </table>
+    <nav>
+        <ul>
+          <li><a href="#0">Home</a></li>
+          <li><a href="#0">Card</a></li>
+          <li>
+            <a href="#0">Albums</a>
+            <ul>
+              <li><a href="#0">Some text text </a></li>
+              <li><a href="#0">Some text text </a></li>
+              <li><a href="#0">Some text text </a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#0">Essentials</a>
+            <ul>
+              <li><a href="#0">Some text text </a></li>
+              <li><a href="#0">Some text text </a></li>
+              <li><a href="#0">Some text text </a></li>
+            </ul>
+        </li>
+        </ul>
+    </nav>
     <table id="shop-wrapper">
         <tr>
             <td id="shop-menu">
                 <div id="shop-menu-content">
-                <div>
-                    <label for="genre">Select genre:</label>
+                
+                <div class="dropdown">
+                    <label for="genre">Select Genre</label>
                     <select name="genre" id="genre-selector">
-                        <option value="" disabled selected>--select genre--</option>
+                        <option class="grey" value="" disabled selected>Select Genre</option>
                         <option value="phylosopy">Physolophy</option>
                         <option value="novel">Novel</option>
                         <option value="action">Action</option>
@@ -185,6 +50,7 @@
                 <div>
                     <label for="cover">Select cover type:</label>
                     <select name="genre" id="genre-selector">
+                        <option class="grey" value="" disabled selected>Select Cover</option>
                         <option value="soft">soft</option>
                         <option value="hard">hard</option>
                     </select>
@@ -209,29 +75,16 @@
                     <input list="shops" id="select-shop" name="select-shop">
                     <datalist id="shops">
                         <option value="Red square">
-                        <option value="Bitsev park">
-                        <option value="Zinger tower">
+                        <option value="Karachev park">
+                        <option value="Karachev tower">
                         <option value="Tsum">
                     </datalist>
                 </div>
             </div>
             </td>
             <td id="shop-content">
-                <div id="adv">
-                    
-                    <!-- <img src="https://clipart-library.com/images/6cr5qeBdi.jpg" alt="book shelf" width="100%"> -->
+                <div id="cover">
                 </div>
-                <div class="slider-container">
-                    <div class="slider">
-                      <img src="https://tintin.cdnartwhere.eu/modules/ps_imageslider/images/693844bc51894e497cdcb95f6642f6c9983389fa_bandeaucataloguenice.jpg" alt="Белый пушистый кот">
-                      <img src="https://tintin.cdnartwhere.eu/modules/ps_imageslider/images/a03be2ba6a8cf5c2096f4e0e0d17d53ae6346c7a_porteclesbannerwebshop.jpg" alt="Рыжий пушистый кот в джинсах">
-                      <img src="https://i.postimg.cc/4NxWmZkP/3.png" alt="Бело-рыжий пушистый кот">
-                      <img src="https://i.postimg.cc/FFZPrzq1/8.png" alt="Золотистый пушистый кот">
-                      <img src="https://i.postimg.cc/jd3Zf9Rb/7.png" alt="Золотистый пушистый кот">
-                    </div>
-                    <button class="prev-button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
-                    <button class="next-button" aria-label="Посмотреть следующий слайд">&gt</button>
-                  </div>
                 <div>
                     <table>
                         <tbody id="items-layout">
