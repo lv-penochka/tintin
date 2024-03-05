@@ -4,107 +4,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Нам нравится учиться</title>
-    <link rel='stylesheet' href='styles.css'/>
+    <title>Students book shelf</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
+
 <body>
-    <nav>
-        <ul>
-          <li><a href="#0">Home</a></li>
-          <li><a href="#0">Card</a></li>
-          <li>
-            <a href="#0">Albums</a>
-            <ul>
-              <li><a href="#0">Some text text </a></li>
-              <li><a href="#0">Some text text </a></li>
-              <li><a href="#0">Some text text </a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#0">Essentials</a>
-            <ul>
-              <li><a href="#0">Some text text </a></li>
-              <li><a href="#0">Some text text </a></li>
-              <li><a href="#0">Some text text </a></li>
-            </ul>
-        </li>
-        </ul>
-    </nav>
-    <table id="shop-wrapper">
-        <tr>
-            <td id="shop-menu">
-                <div id="shop-menu-content">
-                
-                <div class="dropdown">
-                    <label for="genre">Select Genre</label>
+    <header>
+        <nav>
+            <div class="header-menu">
+                <span>
+                    <a  href="#0">Menu</a>
+                </span>
+            </div>
+            <div class="shop-name">
+                <span>
+                <a id="root-shop-link" href="#0">Students shop</a>
+                </span>
+            </div>
+            <div class="header-cart">
+                <span>
+                    <a  href="#0">Card</a>
+                </span>
+            </div>
+        </nav>
+    </header>
+    <div class="shop-wrapper">
+        <div class="shop">
+            <div class="menu">
+                <div class="menu-item">
+                    <label for="cover">Select genre</label>
                     <select name="genre" id="genre-selector">
-                        <option class="grey" value="" disabled selected>Select Genre</option>
+                        <option value="" disabled selected>select genre</option>
                         <option value="phylosopy">Physolophy</option>
                         <option value="novel">Novel</option>
                         <option value="action">Action</option>
                         <option value="adventure">Adventure</option>
                     </select>
                 </div>
-                <div>
-                    <label for="cover">Select cover type:</label>
+                <div class="menu-item">
+                    <label for="cover">Select cover type</label>
                     <select name="genre" id="genre-selector">
-                        <option class="grey" value="" disabled selected>Select Cover</option>
+                        <option value="" disabled selected>select cover</option>
                         <option value="soft">soft</option>
                         <option value="hard">hard</option>
                     </select>
                 </div>
-                <div>
+                <div class="menu-item">
                     <label for="delivery">Delivery:</label>
                     <input type="checkbox" name="delivery" id="delivery">
                 </div>
-                <div>
-                    <strong>Select delivery type:</strong>
-                    <div>
-                        <label for="delivery-type">air:</label>
-                        <input type="radio" name="delivery-type" id="delivery-type-air" value="air">
-                        <label for="dewey">post:</label>
-                        <input type="radio" id="dewey" name="delivery-type" value="post" />
-                        <label for="dewey">courier:</label>
-                        <input type="radio" id="courier" name="delivery-type" value="courier" />
-                    </div>
-                </div>
-                <div>
+                <div class="menu-item">
                     <label for="select-shop">Select shop:</label>
                     <input list="shops" id="select-shop" name="select-shop">
                     <datalist id="shops">
                         <option value="Red square">
-                        <option value="Karachev park">
-                        <option value="Karachev tower">
+                        <option value="Bitsev park">
+                        <option value="Zinger tower">
                         <option value="Tsum">
                     </datalist>
                 </div>
             </div>
-            </td>
-            <td id="shop-content">
-                <div id="cover">
-                </div>
-                <div>
-                    <table>
-                        <tbody id="items-layout">
-                        </tbody>
-                        <tfoot id="items-pagination">
-                            <td colspan="3">
-                            <span id="prev-icon">&laquo;</span>
-                            <div id="middle-section"></div>
-                            <span id="next-icon">&raquo;</span>
-                            </td>
-                        </tfoot>
-                    </table>
-                </div>
-            </td>
-        </tr>
-    </table>
+            <div class="goods">
+                <div class="goods-item">
+                    <div class="card adv-card">
+                        <div class="card__body">
+                          <span class="tag tag-adv">Try new</span>
+                          <h4>What's new in 2022 Tech</h4>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="footerright">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods-item">
+                        <div class="card">
+                            <div class="card__header">
+                              <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+                            </div>
+                            <div class="card__body">
+                              <span class="tag tag-blue">Book</span>
+                              <h4>What's new in 2022 Tech</h4>
+                              <p>Lorem ipsum dolor sit amet consecteturbus. Doloremque, nihil! At ea atque quidem!</p>
+                              <div class="card__footer">
+                                <div class="media-body"><a class="card-link" href="javascript://">Read More</a></div>
+                                <div class="footerright">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.01 4H7.98C6.89 4 6 4.826 6 5.837v12.85c0 .486.29.92.745 1.147.211.103.434.154.667.154.267 0 .545-.072.779-.216l3.803-2.323 3.815 2.333a1.5 1.5 0 001.446.062c.456-.227.745-.671.745-1.146V5.838C17.989 4.825 17.1 4 16.01 4zm.31 14.244l-4.326-2.653-4.326 2.653V5.837c0-.165.145-.289.312-.289h8.03c.177 0 .31.134.31.29v12.406z" fill="currentColor"></path></svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.65 19c.399 0 .717-.166 1.108-.527l5.85-5.6c.289-.278.392-.602.392-.873 0-.286-.103-.595-.392-.873l-5.85-5.562c-.428-.4-.702-.565-1.093-.565-.584 0-.997.467-.997 1.046v2.695h-.185C6.356 8.74 4 12.098 4 17.562c0 .926.392 1.408.901 1.408.384 0 .746-.12 1.027-.662 1.174-2.228 2.837-3.026 5.555-3.026h.185v2.717c0 .572.413 1.001.982 1.001zm.465-1.912c-.059 0-.103-.053-.103-.12v-2.793c0-.173-.074-.248-.244-.248h-.953c-3.398 0-5.562 1.114-6.448 2.988-.023.045-.037.068-.067.068-.037 0-.052-.023-.052-.076.119-3.575 1.773-6.826 6.567-6.826h.953c.17 0 .244-.076.244-.249V6.98c0-.068.044-.113.11-.113.045 0 .09.022.119.06l5.067 4.93c.06.06.082.098.082.143 0 .045-.023.083-.082.143l-5.067 4.885a.18.18 0 01-.126.06z" fill="currentColor"></path></svg>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                <div class="goods-item">
+                    <div class="card">
+                        <div class="card__header">
+                          <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+                        </div>
+                        <div class="card__body">
+                          <span class="tag tag-yellow">Course</span>
+                          <h4>What's new in 2022 Tech</h4>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                          <div class="card__footer">
+                            <div class="media-body"><a class="card-link" href="javascript://">Read More</a></div>
+                            <div class="footerright">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.01 4H7.98C6.89 4 6 4.826 6 5.837v12.85c0 .486.29.92.745 1.147.211.103.434.154.667.154.267 0 .545-.072.779-.216l3.803-2.323 3.815 2.333a1.5 1.5 0 001.446.062c.456-.227.745-.671.745-1.146V5.838C17.989 4.825 17.1 4 16.01 4zm.31 14.244l-4.326-2.653-4.326 2.653V5.837c0-.165.145-.289.312-.289h8.03c.177 0 .31.134.31.29v12.406z" fill="currentColor"></path></svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.65 19c.399 0 .717-.166 1.108-.527l5.85-5.6c.289-.278.392-.602.392-.873 0-.286-.103-.595-.392-.873l-5.85-5.562c-.428-.4-.702-.565-1.093-.565-.584 0-.997.467-.997 1.046v2.695h-.185C6.356 8.74 4 12.098 4 17.562c0 .926.392 1.408.901 1.408.384 0 .746-.12 1.027-.662 1.174-2.228 2.837-3.026 5.555-3.026h.185v2.717c0 .572.413 1.001.982 1.001zm.465-1.912c-.059 0-.103-.053-.103-.12v-2.793c0-.173-.074-.248-.244-.248h-.953c-3.398 0-5.562 1.114-6.448 2.988-.023.045-.037.068-.067.068-.037 0-.052-.023-.052-.076.119-3.575 1.773-6.826 6.567-6.826h.953c.17 0 .244-.076.244-.249V6.98c0-.068.044-.113.11-.113.045 0 .09.022.119.06l5.067 4.93c.06.06.082.098.082.143 0 .045-.023.083-.082.143l-5.067 4.885a.18.18 0 01-.126.06z" fill="currentColor"></path></svg>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="goods-item">
+                        <div class="card">
+                            <div class="card__header">
+                              <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+                            </div>
+                            <div class="card__body">
+                              <span class="tag tag-blue">Technology</span>
+                              <h4>What's new in 2022 Tech</h4>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                              <div class="card__footer">
+                                <div class="media-body"><a class="card-link" href="javascript://">Read More</a></div>
+                                <div class="footerright">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.01 4H7.98C6.89 4 6 4.826 6 5.837v12.85c0 .486.29.92.745 1.147.211.103.434.154.667.154.267 0 .545-.072.779-.216l3.803-2.323 3.815 2.333a1.5 1.5 0 001.446.062c.456-.227.745-.671.745-1.146V5.838C17.989 4.825 17.1 4 16.01 4zm.31 14.244l-4.326-2.653-4.326 2.653V5.837c0-.165.145-.289.312-.289h8.03c.177 0 .31.134.31.29v12.406z" fill="currentColor"></path></svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.65 19c.399 0 .717-.166 1.108-.527l5.85-5.6c.289-.278.392-.602.392-.873 0-.286-.103-.595-.392-.873l-5.85-5.562c-.428-.4-.702-.565-1.093-.565-.584 0-.997.467-.997 1.046v2.695h-.185C6.356 8.74 4 12.098 4 17.562c0 .926.392 1.408.901 1.408.384 0 .746-.12 1.027-.662 1.174-2.228 2.837-3.026 5.555-3.026h.185v2.717c0 .572.413 1.001.982 1.001zm.465-1.912c-.059 0-.103-.053-.103-.12v-2.793c0-.173-.074-.248-.244-.248h-.953c-3.398 0-5.562 1.114-6.448 2.988-.023.045-.037.068-.067.068-.037 0-.052-.023-.052-.076.119-3.575 1.773-6.826 6.567-6.826h.953c.17 0 .244-.076.244-.249V6.98c0-.068.044-.113.11-.113.045 0 .09.022.119.06l5.067 4.93c.06.06.082.098.082.143 0 .045-.023.083-.082.143l-5.067 4.885a.18.18 0 01-.126.06z" fill="currentColor"></path></svg>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    <div class="goods-item">
+                        <div class="card">
+                            <div class="card__header">
+                              <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+                            </div>
+                            <div class="card__body">
+                              <span class="tag tag-blue">Technology</span>
+                              <h4>What's new in 2022 Tech</h4>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                              <div class="card__footer">
+                                <div class="media-body"><a class="card-link" href="javascript://">Read More</a></div>
+                                <div class="footerright">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.01 4H7.98C6.89 4 6 4.826 6 5.837v12.85c0 .486.29.92.745 1.147.211.103.434.154.667.154.267 0 .545-.072.779-.216l3.803-2.323 3.815 2.333a1.5 1.5 0 001.446.062c.456-.227.745-.671.745-1.146V5.838C17.989 4.825 17.1 4 16.01 4zm.31 14.244l-4.326-2.653-4.326 2.653V5.837c0-.165.145-.289.312-.289h8.03c.177 0 .31.134.31.29v12.406z" fill="currentColor"></path></svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.65 19c.399 0 .717-.166 1.108-.527l5.85-5.6c.289-.278.392-.602.392-.873 0-.286-.103-.595-.392-.873l-5.85-5.562c-.428-.4-.702-.565-1.093-.565-.584 0-.997.467-.997 1.046v2.695h-.185C6.356 8.74 4 12.098 4 17.562c0 .926.392 1.408.901 1.408.384 0 .746-.12 1.027-.662 1.174-2.228 2.837-3.026 5.555-3.026h.185v2.717c0 .572.413 1.001.982 1.001zm.465-1.912c-.059 0-.103-.053-.103-.12v-2.793c0-.173-.074-.248-.244-.248h-.953c-3.398 0-5.562 1.114-6.448 2.988-.023.045-.037.068-.067.068-.037 0-.052-.023-.052-.076.119-3.575 1.773-6.826 6.567-6.826h.953c.17 0 .244-.076.244-.249V6.98c0-.068.044-.113.11-.113.045 0 .09.022.119.06l5.067 4.93c.06.06.082.098.082.143 0 .045-.023.083-.082.143l-5.067 4.885a.18.18 0 01-.126.06z" fill="currentColor"></path></svg>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <div class="goods-item">
+                            <div class="card">
+                                <div class="card__header">
+                                  <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="card__body">
+                                  <span class="tag tag-blue">Technology</span>
+                                  <h4>What's new in 2022 Tech</h4>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                                  <div class="card__footer">
+                                    <div class="media-body"><a class="card-link" href="javascript://">Read More</a></div>
+                                    <div class="footerright">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.01 4H7.98C6.89 4 6 4.826 6 5.837v12.85c0 .486.29.92.745 1.147.211.103.434.154.667.154.267 0 .545-.072.779-.216l3.803-2.323 3.815 2.333a1.5 1.5 0 001.446.062c.456-.227.745-.671.745-1.146V5.838C17.989 4.825 17.1 4 16.01 4zm.31 14.244l-4.326-2.653-4.326 2.653V5.837c0-.165.145-.289.312-.289h8.03c.177 0 .31.134.31.29v12.406z" fill="currentColor"></path></svg>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.65 19c.399 0 .717-.166 1.108-.527l5.85-5.6c.289-.278.392-.602.392-.873 0-.286-.103-.595-.392-.873l-5.85-5.562c-.428-.4-.702-.565-1.093-.565-.584 0-.997.467-.997 1.046v2.695h-.185C6.356 8.74 4 12.098 4 17.562c0 .926.392 1.408.901 1.408.384 0 .746-.12 1.027-.662 1.174-2.228 2.837-3.026 5.555-3.026h.185v2.717c0 .572.413 1.001.982 1.001zm.465-1.912c-.059 0-.103-.053-.103-.12v-2.793c0-.173-.074-.248-.244-.248h-.953c-3.398 0-5.562 1.114-6.448 2.988-.023.045-.037.068-.067.068-.037 0-.052-.023-.052-.076.119-3.575 1.773-6.826 6.567-6.826h.953c.17 0 .244-.076.244-.249V6.98c0-.068.044-.113.11-.113.045 0 .09.022.119.06l5.067 4.93c.06.06.082.098.082.143 0 .045-.023.083-.082.143l-5.067 4.885a.18.18 0 01-.126.06z" fill="currentColor"></path></svg>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                                <div class="goods-item">
+                                    <div class="card">
+                                        <div class="card__header">
+                                          <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+                                        </div>
+                                        <div class="card__body">
+                                          <span class="tag tag-blue">Technology</span>
+                                          <h4>What's new in 2022 Tech</h4>
+                                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                                          <div class="card__footer">
+                                            <div class="media-body"><a class="card-link" href="javascript://">Read More</a></div>
+                                            <div class="footerright">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.01 4H7.98C6.89 4 6 4.826 6 5.837v12.85c0 .486.29.92.745 1.147.211.103.434.154.667.154.267 0 .545-.072.779-.216l3.803-2.323 3.815 2.333a1.5 1.5 0 001.446.062c.456-.227.745-.671.745-1.146V5.838C17.989 4.825 17.1 4 16.01 4zm.31 14.244l-4.326-2.653-4.326 2.653V5.837c0-.165.145-.289.312-.289h8.03c.177 0 .31.134.31.29v12.406z" fill="currentColor"></path></svg>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.65 19c.399 0 .717-.166 1.108-.527l5.85-5.6c.289-.278.392-.602.392-.873 0-.286-.103-.595-.392-.873l-5.85-5.562c-.428-.4-.702-.565-1.093-.565-.584 0-.997.467-.997 1.046v2.695h-.185C6.356 8.74 4 12.098 4 17.562c0 .926.392 1.408.901 1.408.384 0 .746-.12 1.027-.662 1.174-2.228 2.837-3.026 5.555-3.026h.185v2.717c0 .572.413 1.001.982 1.001zm.465-1.912c-.059 0-.103-.053-.103-.12v-2.793c0-.173-.074-.248-.244-.248h-.953c-3.398 0-5.562 1.114-6.448 2.988-.023.045-.037.068-.067.068-.037 0-.052-.023-.052-.076.119-3.575 1.773-6.826 6.567-6.826h.953c.17 0 .244-.076.244-.249V6.98c0-.068.044-.113.11-.113.045 0 .09.022.119.06l5.067 4.93c.06.06.082.098.082.143 0 .045-.023.083-.082.143l-5.067 4.885a.18.18 0 01-.126.06z" fill="currentColor"></path></svg>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="goods-item">
+                                        <div class="card adv-card card-yellow">
+                                            <div class="card__body">
+                                              <span class="tag tag-adv">Try new</span>
+                                              <h4>What's new in 2022 Tech</h4>
+                                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                                            </div>
+                                            <div class="card__footer">
+                                                <div class="footerright">
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            </div>
+        </div>
+    </div>
+    
+                        
     <footer>
         made by me for Auxo students
     </footer>
-    <script type="module" src="./shop.js"></script>
+
 </body>
 
 </html>
