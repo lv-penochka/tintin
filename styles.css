@@ -12,14 +12,10 @@ body {
 :root {
   /* --main-color: #add8e6; */
   --main-blue-color: rgb(47, 128, 237);
-  --main-color-rgb: 20, 111, 141;
   --border-color:127, 128, 132;
 }
 
-input[type="button"] {
-  background-color: rgba(var(--main-color-rgb), 90%);
-  background-color: rgba(20, 111, 141, 90%);
-}
+
 
 /* header */
 header{
@@ -99,9 +95,6 @@ header span{
     order: 2;
   }
 }
-
-
-
 /* header */
 
 /* shop */
@@ -255,7 +248,6 @@ input[type="checkbox"]::before {
 }
 .card__body p{
   display: -webkit-box;
-  /* max-width: 200px; */
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -263,7 +255,7 @@ input[type="checkbox"]::before {
 }
 .card__body:has(.card-link:focus){
   overflow: hidden;
-  background-color: #E02A21;
+  background-color: #dedce5;
   animation: pushBody 0.4s linear;
 }
 
